@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body{
+    background: #e7e5e5;
+}
+
+.calci{
+    width: 100%;
+    min-height: 80vh;
+    background: rgb(220, 239, 218);
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /*will generate 4 equal cols */
+    max-width: 370px;
+    margin:50px auto;
+    padding: 20px;
+    gap: 18px;
+    position: center;
+    border-radius: 20px;
+    box-shadow: -4px -4px 10px white, 6px 6px 6px #6b6a6a;
+}
+.calci .output{
+    background-color: rgb(235, 226, 226) ;
+    box-shadow: inset 6px 6px 10px 0 rgba(0,0,0,0.2), inset -6px -6px 10px white;
+    grid-column: 1 / 5; /* this line means it will take full width, 1 / 5 means till 4.*/
+    color: black;
+    display: flex; /*so that the values get displayed in the right end.*/
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 6px;
+    word-break: break-all; /*when number is huge in the output screen, it shouldn't go out of the calculator*/
+    word-wrap: break-word;
+}
+.calci button{
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: -4px -4px 4px white,4px 8px 8px #6b6969;
+    background:rgb(215, 220, 233);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;;
+}
+.calci button:hover{
+    background: #bdb7b7;
+}
+.span-two{
+    grid-column: span 2;
+}
+.calci button:last-child{
+    font-weight: 600;
+    border-radius: 35px;
+}
